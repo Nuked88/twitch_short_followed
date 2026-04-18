@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch Followed Order</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 240px;
+      background: #18181b;
+      color: #efeff1;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 13px;
+      padding: 16px;
+    }
+    h2 {
+      color: #9147ff;
+      font-size: 14px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    label { display: block; margin-bottom: 6px; color: #adadb8; text-align: center; }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    input[type="number"] {
+      width: 70px;
+      background: #0e0e10;
+      border: 1px solid #464649;
+      color: #efeff1;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    input[type="number"]:focus {
+      outline: none;
+      border-color: #9147ff;
+    }
+    button {
+      background: #9147ff;
+      border: none;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    button:hover { background: #772ce8; }
+    .hint { color: #5a5a68; font-size: 11px; margin-top: -10px; margin-bottom: 14px; text-align: center; }
+    .sep { border: none; border-top: 1px solid #2e2e35; margin: 12px 0; }
+    .reset-btn {
+      background: #3a3a3f;
+      width: 100%;
+    }
+    .reset-btn:hover { background: #464649; }
+    #status { color: #1db954; font-size: 11px; min-height: 14px; margin-top: 4px; text-align: center; }
+    .kofi-btn {
+      display: block;
+      width: 100%;
+      background: #ff5e5b;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      padding: 7px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .kofi-btn:hover { background: #e04e4b; }
+  </style>
+</head>
+<body>
+  <h2>Twitch Followed Order</h2>
+
+  <label for="visibleCount">Channels shown in sidebar</label>
+  <div class="row">
+    <input type="number" id="visibleCount" min="0" max="500" value="10">
+    <button id="saveVisible">Save</button>
+  </div>
+  <p class="hint">0 = show all</p>
+
+  <hr class="sep">
+
+  <button id="resetOrder" class="reset-btn">Reset Custom Order</button>
+
+  <div id="status"></div>
+
+  <hr class="sep">
+
+  <a href="https://ko-fi.com/nuked" target="_blank" class="kofi-btn">☕ Buy me a coffee!</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>
