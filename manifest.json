@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Twitch Followed Order",
+  "name": "Twitch Sort Followed",
   "version": "1.0",
   "description": "Custom drag-and-drop order for Twitch followed channels sidebar",
   "permissions": ["storage", "scripting", "activeTab"],
@@ -13,6 +13,6 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Twitch Followed Order"
+    "default_title": "Twitch Sort Followed"
   }
 }
